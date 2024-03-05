@@ -1,14 +1,22 @@
-document.getElementById('pricePredictionForm').addEventListener('submit', function(event){
-    event.preventDefault(); // Prevent the default form submission
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('pricePredictionForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
 
-    // Simulate fetching data from an API by creating a mock response
-    setTimeout(() => {
-        // Mocked API response
-        const mockedApiResponse = {
-            prediction: "High demand"
-        };
+        // Here you could potentially gather the form data and send it to your backend
+        // For now, we'll simulate a response as previously discussed
 
-        // Process the mocked response as if it was returned by an actual API
-        document.getElementById('predictionResult').innerText = 'Predicted Demand: ' + mockedApiResponse.prediction;
-    }, 1000); // Simulate network delay
+        const ourPrice = document.getElementById('ourPrice').value;
+        const competitorPrice = document.getElementById('competitorPrice').value;
+
+        // Mock the response after a "fake" delay to simulate API call
+        setTimeout(() => {
+            // Mocked API response
+            const mockedApiResponse = {
+                prediction: `Predicted demand for our price $${ourPrice} and competitor price $${competitorPrice} is high.`
+            };
+
+            // Display the mocked prediction result
+            document.getElementById('predictionResult').innerText = mockedApiResponse.prediction;
+        }, 1000);
+    });
 });

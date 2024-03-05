@@ -7,40 +7,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="sidebar">
-        <!-- Sidebar content here -->
-        <div class="logo">PRICEWISE</div>
-        <div class="menu">
-            <div class="menu-item">Workspaces</div>
-            <div class="menu-item">Tools</div>
-            <div class="menu-item active">Price Optimization</div>
-            <div class="menu-item">Reports</div>
-            <div class="menu-item">Settings</div>
-            <div class="menu-item">Support</div>
-        </div>
-    </div>
-    <div class="main-content">
-        <div class="header">
-            <!-- Header content like notifications -->
-            <div class="notification">2 New Notifications</div>
-        </div>
-        <div class="content">
-            <h2>Price Optimization</h2>
-            <form id="pricePredictionForm" class="prediction-form">
-                <div class="form-group">
-                    <label for="ourPrice">Our Price:</label>
-                    <input type="number" id="ourPrice" name="ourPrice" required>
-                </div>
-                <div class="form-group">
-                    <label for="competitorPrice">Competitor's Price:</label>
-                    <input type="number" id="competitorPrice" name="competitorPrice" required>
-                </div>
-                <div class="form-group">
-                    <button type="submit" class="predict-button">Predict Demand</button>
-                </div>
-            </form>
-            <div id="predictionResult" class="prediction-result"></div>
-        </div>
+    <div class="container">
+        <h1>PriceWise Automated Price Optimization Tool</h1>
+        <form id="pricePredictionForm">
+            <div class="form-group">
+                <label for="ourPrice">Our Price:</label>
+                <input type="number" id="ourPrice" name="ourPrice" required>
+            </div>
+            <div class="form-group">
+                <label for="competitorPrice">Competitor's Price:</label>
+                <input type="number" id="competitorPrice" name="competitorPrice" required>
+            </div>
+            <button type="submit">Predict Demand</button>
+        </form>
+        <div id="predictionResult"></div>
     </div>
     <script src="script.js"></script>
 </body>
